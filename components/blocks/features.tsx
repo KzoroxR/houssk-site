@@ -15,7 +15,7 @@ import { sectionBlockSchemaField } from '../layout/section';
 
 export const Features = ({ data }: { data: PageBlocksFeatures }) => {
   return (
-    <Section background={data.background!}>
+    <Section id="features" background={data.background!}>
       <div className="@container mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 data-tina-field={tinaField(data, 'title')} className="text-balance text-4xl font-semibold lg:text-5xl">{data.title}</h2>

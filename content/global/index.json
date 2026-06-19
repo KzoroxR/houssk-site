@@ -1,58 +1,33 @@
 {
   "header": {
     "icon": {
-      "name": "Tina",
+      "name": "BiHomeHeart",
       "color": "orange",
-      "style": "float"
+      "style": "circle"
     },
-    "name": "Tina Starter",
+    "name": "hous.sk",
     "color": "default",
     "nav": [
       {
         "href": "/",
-        "label": "Home"
+        "label": "Accueil"
       },
       {
-        "href": "/about",
-        "label": "About"
+        "href": "/privacy",
+        "label": "Confidentialite"
       },
       {
-        "href": "/posts",
-        "label": "Blog"
+        "href": "/delete-account",
+        "label": "Suppression de compte"
       }
     ]
   },
   "footer": {
-    "social": [
-      {
-        "icon": {
-          "name": "FaLinkedin"
-        },
-        "url": "https://www.linkedin.com/company/tinacms"
-      },
-      {
-        "icon": {
-          "name": "FaGithub"
-        },
-        "url": "https://github.com/tinacms/tinacms"
-      },
-      {
-        "icon": {
-          "name": "FaYoutube"
-        },
-        "url": "https://www.youtube.com/@TinaCMS"
-      },
-      {
-        "icon": {
-          "name": "FaXTwitter"
-        },
-        "url": "https://x.com/TinaCMS"
-      }
-    ]
+    "social": []
   },
   "theme": {
-    "color": "blue",
-    "font": "sans",
+    "color": "orange",
+    "font": "nunito",
     "darkMode": "light"
   }
 }

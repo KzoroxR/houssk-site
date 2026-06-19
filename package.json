@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev --turbopack\"",
+    "clean": "node -e \"require('fs').rmSync('.next',{ recursive: true, force: true })\"",
+    "dev": "npm run clean && tinacms dev -c \"next dev\"",
+    "dev:turbo": "npm run clean && tinacms dev -c \"next dev --turbopack\"",
     "build": "tinacms build && next build",
     "build-local": "tinacms build --content=local --skip-cloud-checks -c \"next build\"",
     "start": "tinacms build && next start",
