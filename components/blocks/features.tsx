@@ -8,10 +8,29 @@ import { tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { components } from "../mdx-components";
 import { Icon } from "../icon";
-import { iconSchema } from "../../tina/fields/icon";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Section } from "../layout/section";
 import { sectionBlockSchemaField } from '../layout/section';
+
+const simpleIconFields = [
+  {
+    type: 'string',
+    label: 'Name',
+    name: 'name',
+  },
+  {
+    type: 'string',
+    label: 'Color',
+    name: 'color',
+    options: ['blue', 'teal', 'green', 'yellow', 'orange', 'red', 'pink', 'purple', 'white', 'primary'],
+  },
+  {
+    type: 'string',
+    label: 'Style',
+    name: 'style',
+    options: ['circle', 'float'],
+  },
+];
 
 export const Features = ({ data }: { data: PageBlocksFeatures }) => {
   return (
@@ -121,7 +140,12 @@ export const featureBlockSchema: Template = {
         },
       },
       fields: [
-        iconSchema as any,
+        {
+          type: 'object',
+          label: 'Icon',
+          name: 'icon',
+          fields: simpleIconFields as any,
+        },
         {
           type: "string",
           label: "Title",

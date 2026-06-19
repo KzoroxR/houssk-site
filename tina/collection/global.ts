@@ -1,6 +1,24 @@
 import type { Collection } from "tinacms";
-import { ColorPickerInput } from "../fields/color";
-import { iconSchema } from "../fields/icon";
+
+const simpleIconFields = [
+  {
+    type: "string",
+    label: "Name",
+    name: "name",
+  },
+  {
+    type: "string",
+    label: "Color",
+    name: "color",
+    options: ["blue", "teal", "green", "yellow", "orange", "red", "pink", "purple", "white", "primary"],
+  },
+  {
+    type: "string",
+    label: "Style",
+    name: "style",
+    options: ["circle", "float"],
+  },
+];
 
 const Global: Collection = {
   label: "Global",
@@ -16,7 +34,12 @@ const Global: Collection = {
       label: "Header",
       name: "header",
       fields: [
-        iconSchema as any,
+        {
+          type: "object",
+          label: "Icon",
+          name: "icon",
+          fields: simpleIconFields as any,
+        },
         {
           type: "string",
           label: "Name",
@@ -76,7 +99,12 @@ const Global: Collection = {
             },
           },
           fields: [
-            iconSchema as any,
+            {
+              type: "object",
+              label: "Icon",
+              name: "icon",
+              fields: simpleIconFields as any,
+            },
             {
               type: "string",
               label: "Url",
@@ -96,9 +124,7 @@ const Global: Collection = {
           type: "string",
           label: "Primary Color",
           name: "color",
-          ui: {
-            component: ColorPickerInput,
-          },
+          options: ["blue", "teal", "green", "yellow", "orange", "red", "pink", "purple", "white"],
         },
         {
           type: "string",

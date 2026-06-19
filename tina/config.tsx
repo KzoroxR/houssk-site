@@ -1,10 +1,7 @@
 import { defineConfig } from "tinacms";
 
-import Post from "./collection/post";
 import Global from "./collection/global";
-import Author from "./collection/author";
 import Page from "./collection/page";
-import Tag from "./collection/tag";
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -39,7 +36,7 @@ const config = defineConfig({
     basePath: "",
   },
   schema: {
-    collections: [Page, Post, Author, Tag, Global],
+    collections: [Page, Global],
   },
 });
 

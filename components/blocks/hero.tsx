@@ -1,5 +1,4 @@
 'use client';
-import { iconSchema } from '@/tina/fields/icon';
 import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
@@ -40,6 +39,26 @@ const transitionVariants = {
     },
   },
 };
+
+const simpleIconFields = [
+  {
+    type: 'string',
+    label: 'Name',
+    name: 'name',
+  },
+  {
+    type: 'string',
+    label: 'Color',
+    name: 'color',
+    options: ['blue', 'teal', 'green', 'yellow', 'orange', 'red', 'pink', 'purple', 'white', 'primary'],
+  },
+  {
+    type: 'string',
+    label: 'Style',
+    name: 'style',
+    options: ['circle', 'float'],
+  },
+];
 
 export const Hero = ({ data }: { data: PageBlocksHero }) => {
   // Extract the background style logic into a more readable format
@@ -188,7 +207,12 @@ export const heroBlockSchema: Template = {
             { label: 'Link', value: 'link' },
           ],
         },
-        iconSchema as any,
+        {
+          type: 'object',
+          label: 'Icon',
+          name: 'icon',
+          fields: simpleIconFields as any,
+        },
         {
           label: 'Link',
           name: 'link',

@@ -1,11 +1,30 @@
 import Link from 'next/link'
 import type { Template } from 'tinacms';
 import { tinaField } from 'tinacms/dist/react';
-import { iconSchema } from '@/tina/fields/icon';
 import { Button } from '@/components/ui/button'
 import { PageBlocksCta } from '@/tina/__generated__/types';
 import { Icon } from '../icon';
 import { Section } from '../layout/section';
+
+const simpleIconFields = [
+    {
+        type: 'string',
+        label: 'Name',
+        name: 'name',
+    },
+    {
+        type: 'string',
+        label: 'Color',
+        name: 'color',
+        options: ['blue', 'teal', 'green', 'yellow', 'orange', 'red', 'pink', 'purple', 'white', 'primary'],
+    },
+    {
+        type: 'string',
+        label: 'Style',
+        name: 'style',
+        options: ['circle', 'float'],
+    },
+];
 
 export const CallToAction = ({ data }: { data: PageBlocksCta }) => {
     return (
@@ -108,7 +127,12 @@ export const ctaBlockSchema: Template = {
                         { label: 'Link', value: 'link' },
                     ],
                 },
-                iconSchema as any,
+                {
+                    type: 'object',
+                    label: 'Icon',
+                    name: 'icon',
+                    fields: simpleIconFields as any,
+                },
                 {
                     label: 'Link',
                     name: 'link',
