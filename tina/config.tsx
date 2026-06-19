@@ -7,13 +7,21 @@ import Author from "./collection/author";
 import Page from "./collection/page";
 import Tag from "./collection/tag";
 
+const branch =
+  process.env.NEXT_PUBLIC_TINA_BRANCH ||
+  process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ||
+  process.env.HEAD ||
+  "main";
+
+// Tina's generated client expects cloud config values to exist even for local-content builds.
+// Fallback placeholders keep local/VPS builds working until real TinaCloud credentials are added.
+const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "local-client-id";
+const token = process.env.TINA_TOKEN || "local-token";
+
 const config = defineConfig({
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
-  branch:
-    process.env.NEXT_PUBLIC_TINA_BRANCH! || // custom branch env override
-    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF! || // Vercel branch env
-    process.env.HEAD!, // Netlify branch env
-  token: process.env.TINA_TOKEN!,
+  clientId,
+  branch,
+  token,
   media: {
     // If you wanted cloudinary do this
     // loadCustomStore: async () => {
