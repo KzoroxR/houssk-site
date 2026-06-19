@@ -6,7 +6,7 @@
     "dev": "tinacms dev -c \"next dev --turbopack\"",
     "build": "tinacms build && next build",
     "build-local": "tinacms build --content=local --skip-cloud-checks -c \"next build\"",
-    "start": "tinacms build && next start",
+    "start": "npm run build && next start",
     "export": "npm run build && next export",
     "lint": "biome lint",
     "dev:build": "next build"
