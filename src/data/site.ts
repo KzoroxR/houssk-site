@@ -3,7 +3,7 @@ export const site = {
   title: "Houssk | L'app foyer qui remet tout au même endroit",
   description:
     "Houssk présente hous.sk, l'application mobile pour piloter les tâches, les dépenses, les courses, le calendrier, les repas et les échanges du foyer.",
-  appUrl: "https://hous.sk",
+  appUrl: "https://play.google.com/store/apps/details?id=com.chrisrolin.houssk",
   email: "contact@houssk.fr",
 };
 
