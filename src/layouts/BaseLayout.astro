@@ -1,0 +1,106 @@
+---
+import "../styles/global.css";
+import Logo from "../components/Logo.astro";
+import { navLinks, site } from "../data/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#09090f" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content={new URL("/uploads/houssk/dashboard.png", Astro.site)} />
+    <script is:inline>document.documentElement.classList.add("js");</script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="ambient ambient-a"></div>
+      <div class="ambient ambient-b"></div>
+      <header class="site-header">
+        <a href="/" class="brand" aria-label="Retour à l'accueil">
+          <Logo class="brand-logo" />
+        </a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          {
+            navLinks.map((link) => (
+              <a href={link.href}>{link.label}</a>
+            ))
+          }
+        </nav>
+        <a href={site.appUrl} class="nav-cta">Ouvrir l'app</a>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <div>
+          <Logo class="footer-logo" />
+          <p>Application de foyer pensée pour les couples, colocs et familles qui veulent enfin centraliser le quotidien.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/confidentialite">Confidentialité</a>
+          <a href="/suppression-compte">Suppression de compte</a>
+          <a href={site.appUrl}>hous.sk</a>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </div>
+      </footer>
+    </div>
+    <script is:inline>
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduceMotion) {
+        const nodes = document.querySelectorAll("[data-parallax]");
+        const update = () => {
+          const viewport = window.innerHeight || 1;
+          nodes.forEach((node) => {
+            const rect = node.getBoundingClientRect();
+            const center = rect.top + rect.height / 2;
+            const distance = (center - viewport / 2) / viewport;
+            node.style.setProperty("--parallax-shift", `${distance * -32}px`);
+            node.style.setProperty("--parallax-rotate", `${distance * 6}deg`);
+          });
+        };
+        let ticking = false;
+        const onScroll = () => {
+          if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(() => {
+              update();
+              ticking = false;
+            });
+          }
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        update();
+
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll("[data-reveal]").forEach((node) => revealObserver.observe(node));
+      }
+    </script>
+  </body>
+</html>

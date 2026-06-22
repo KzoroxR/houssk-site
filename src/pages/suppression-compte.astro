@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout
+  title="Suppression de compte | Houssk"
+  description="Procédure de suppression de compte pour l'application hous.sk."
+>
+  <section class="legal section legal-page">
+    <div class="legal-card">
+      <p class="eyebrow">Document légal</p>
+      <h1>Suppression de compte</h1>
+      <p class="legal-date">Dernière mise à jour : 22 juin 2026</p>
+
+      <p>
+        Cette page explique comment demander la suppression de votre compte lié à <strong>hous.sk</strong>.
+      </p>
+
+      <h2>Demander la suppression</h2>
+      <p>
+        Si vous souhaitez supprimer votre compte et les données associées, envoyez votre demande à
+        <a href={`mailto:${site.email}`}> {site.email}</a>.
+      </p>
+
+      <p>Merci d'indiquer dans votre message les éléments utiles pour identifier votre compte :</p>
+      <ul>
+        <li>L'adresse e-mail utilisée dans l'application</li>
+        <li>Votre nom si nécessaire</li>
+        <li>Toute précision utile pour traiter la demande correctement</li>
+      </ul>
+
+      <h2>Ce que couvre la suppression</h2>
+      <ul>
+        <li>Désactivation de l'accès à votre compte</li>
+        <li>Suppression ou anonymisation des données directement rattachées au compte lorsque cela est possible</li>
+        <li>Interruption de l'usage courant du service pour ce compte</li>
+      </ul>
+
+      <h2>Délais de traitement</h2>
+      <p>
+        Les demandes sont traitées dans un délai raisonnable après vérification de l'identité du demandeur et de la légitimité de la demande.
+      </p>
+
+      <h2>Données pouvant être conservées</h2>
+      <p>
+        Certaines données peuvent être conservées temporairement si cela est requis pour respecter une obligation légale, prévenir la fraude, sécuriser le service ou conserver des traces minimales nécessaires à la gestion d'un litige.
+      </p>
+
+      <h2>Besoin d'aide</h2>
+      <p>
+        Pour toute question liée à la suppression de compte ou à la confidentialité, écrivez à
+        <a href={`mailto:${site.email}`}> {site.email}</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

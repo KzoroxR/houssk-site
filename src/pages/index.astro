@@ -1,0 +1,151 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { featureCards, modules, pillars, site } from "../data/site";
+---
+
+<BaseLayout>
+  <section class="hero section" id="accueil">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow">L'application mobile pour piloter la vie du foyer</p>
+      <h1>Votre foyer.<br /><span>Enfin sur la même longueur d'onde.</span></h1>
+      <p class="lead">
+        <strong>hous.sk</strong> réunit les tâches, les dépenses, le calendrier, les courses, les repas, les notes et les échanges dans un seul espace partagé.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={site.appUrl}>Découvrir l'app</a>
+        <a class="button button-secondary" href="#modules">Voir les modules</a>
+      </div>
+      <ul class="hero-points">
+        <li>Tableau de bord commun</li>
+        <li>Usage mobile-first</li>
+        <li>Moins de charge mentale</li>
+      </ul>
+    </div>
+    <div class="hero-visual" data-parallax>
+      <div class="device device-main">
+        <img src="/uploads/houssk/dashboard.png" alt="Tableau de bord de l'application Houssk" loading="eager" />
+      </div>
+      <div class="device device-floating device-small-left" data-parallax>
+        <img src="/uploads/houssk/tasks.png" alt="Écran des tâches Houssk" />
+      </div>
+      <div class="device device-floating device-small-right" data-parallax>
+        <img src="/uploads/houssk/expenses.png" alt="Écran des dépenses Houssk" />
+      </div>
+    </div>
+  </section>
+
+  <div class="signal-strip" aria-label="Principales fonctions">
+    <div class="signal-track">
+      <span>Tâches</span><i></i><span>Dépenses</span><i></i><span>Calendrier</span><i></i><span>Courses</span><i></i><span>Repas</span><i></i><span>Notes</span><i></i><span>Chat</span><i></i>
+      <span aria-hidden="true">Tâches</span><i></i><span aria-hidden="true">Dépenses</span><i></i><span aria-hidden="true">Calendrier</span><i></i><span aria-hidden="true">Courses</span><i></i><span aria-hidden="true">Repas</span><i></i><span aria-hidden="true">Notes</span><i></i><span aria-hidden="true">Chat</span><i></i>
+    </div>
+  </div>
+
+  <section id="fonctionnalites" class="section">
+    <div class="section-heading" data-reveal>
+      <p class="eyebrow">Ce que l'app résout</p>
+      <h2>Sept outils dispersés. Une seule maison numérique.</h2>
+      <p>
+        Le sujet n'est pas d'ajouter une app de plus. Le sujet est de rassembler ce qui revient tous les jours dans une interface qui reste lisible, rapide et élégante.
+      </p>
+    </div>
+    <div class="feature-grid">
+      {
+        featureCards.map((feature) => (
+          <article class="feature-card" data-reveal>
+            <p class="feature-eyebrow">{feature.eyebrow}</p>
+            <h3>{feature.title}</h3>
+            <p>{feature.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="experience" class="section showcase">
+    <div class="section-heading">
+      <p class="eyebrow">Le foyer en un regard</p>
+      <h2>Ouvrez l'app. Sachez ce qui compte maintenant.</h2>
+      <p>
+        Le tableau de bord fait remonter l'essentiel sans vous noyer: urgences, météo, solde commun, courses et prochains rendez-vous.
+      </p>
+    </div>
+    <div class="showcase-stack">
+      <article class="showcase-panel" data-parallax>
+        <div class="showcase-text">
+          <span class="chip">Dashboard</span>
+          <h3>Vue d'ensemble du foyer</h3>
+          <p>Priorités, météo, dépenses, courses et événements. Une base commune pour les décisions du quotidien.</p>
+        </div>
+        <img src="/uploads/houssk/dashboard.png" alt="Capture du dashboard Houssk" />
+      </article>
+      <article class="showcase-panel alt" data-parallax>
+        <div class="showcase-text">
+          <span class="chip">Routine</span>
+          <h3>Des tâches qui ne se perdent plus</h3>
+          <p>Les récurrences et les retards deviennent lisibles. On ne recommence pas chaque semaine à zéro dans les messages.</p>
+        </div>
+        <img src="/uploads/houssk/tasks.png" alt="Capture des tâches Houssk" />
+      </article>
+    </div>
+  </section>
+
+  <section id="modules" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Un quotidien connecté</p>
+      <h2>Chaque besoin a sa place. Tout reste relié.</h2>
+      <p>
+        Chacun peut agir depuis son téléphone et le foyer garde une vision commune, sans recopier l'information d'une application à l'autre.
+      </p>
+    </div>
+    <div class="module-grid">
+      {
+        modules.map((module) => (
+          <article class="module-card" data-parallax>
+            <div class="module-copy">
+              <h3>{module.title}</h3>
+              <p>{module.subtitle}</p>
+            </div>
+            <img src={module.image} alt={`Capture ${module.title} Houssk`} />
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section split-band">
+    <div class="split-card">
+      <p class="eyebrow">Un seul espace partagé</p>
+      <h2>Tout ce qui fait tourner le foyer, sans les bricolages.</h2>
+      <ul class="pillars">
+        {
+          pillars.map((pillar) => (
+            <li>{pillar}</li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="split-card glow-card" data-parallax>
+      <p class="eyebrow">Pour vivre ensemble</p>
+      <h2>Ni chef de projet, ni tableau Excel à la maison.</h2>
+      <p>
+        Couples, familles ou colocs y retrouvent une structure claire pour agir, anticiper et partager, sans basculer entre notes, rappels, calendriers et tableaux bricolés.
+      </p>
+      <a class="text-link" href={site.appUrl}>Accéder à hous.sk</a>
+    </div>
+  </section>
+
+  <section class="section final-cta">
+    <div class="final-cta-card">
+      <p class="eyebrow">Bienvenue chez vous</p>
+      <h2>Le quotidien bouge. Votre organisation suit.</h2>
+      <p>
+        Créez votre foyer, invitez les personnes qui le partagent et retrouvez enfin vos informations au même endroit.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={site.appUrl}>Ouvrir hous.sk</a>
+        <a class="button button-secondary" href="/suppression-compte">Voir les pages légales</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

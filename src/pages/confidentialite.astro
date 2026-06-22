@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout
+  title="Politique de confidentialité | Houssk"
+  description="Politique de confidentialité du site Houssk et de l'application hous.sk."
+>
+  <section class="legal section legal-page">
+    <div class="legal-card">
+      <p class="eyebrow">Document légal</p>
+      <h1>Politique de confidentialité</h1>
+      <p class="legal-date">Dernière mise à jour : 22 juin 2026</p>
+
+      <h2>1. Objet</h2>
+      <p>
+        Cette page décrit la manière dont <strong>Houssk</strong> et l'application <a href={site.appUrl}>hous.sk</a> peuvent collecter, utiliser et protéger les données personnelles de leurs utilisateurs.
+      </p>
+
+      <h2>2. Données susceptibles d'être traitées</h2>
+      <ul>
+        <li>Identité et coordonnées de contact</li>
+        <li>Informations de connexion</li>
+        <li>Données liées à l'utilisation de l'application</li>
+        <li>Échanges réalisés via un formulaire, un e-mail ou un support</li>
+      </ul>
+
+      <h2>3. Finalités du traitement</h2>
+      <ul>
+        <li>Fournir l'accès au site et à l'application</li>
+        <li>Assurer le bon fonctionnement du service</li>
+        <li>Répondre aux demandes de contact ou d'assistance</li>
+        <li>Améliorer l'expérience utilisateur et la qualité du produit</li>
+        <li>Respecter les obligations légales et de sécurité</li>
+      </ul>
+
+      <h2>4. Base légale</h2>
+      <ul>
+        <li>L'exécution du service</li>
+        <li>Le consentement de l'utilisateur</li>
+        <li>L'intérêt légitime lié à l'amélioration et à la sécurisation du service</li>
+        <li>Le respect d'obligations légales</li>
+      </ul>
+
+      <h2>5. Conservation des données</h2>
+      <p>
+        Les données sont conservées pendant une durée proportionnée à leur finalité, puis supprimées ou anonymisées lorsque leur conservation n'est plus nécessaire.
+      </p>
+
+      <h2>6. Partage des données</h2>
+      <p>
+        Les données ne sont pas vendues. Elles peuvent être partagées uniquement avec des prestataires techniques ou des services nécessaires au fonctionnement, à l'hébergement, à la maintenance ou à la sécurité de la plateforme.
+      </p>
+
+      <h2>7. Sécurité</h2>
+      <p>
+        Des mesures techniques et organisationnelles raisonnables sont mises en place pour limiter l'accès non autorisé, la perte, l'altération ou la divulgation des données.
+      </p>
+
+      <h2>8. Vos droits</h2>
+      <ul>
+        <li>Accéder à vos données</li>
+        <li>Demander leur rectification</li>
+        <li>Demander leur suppression</li>
+        <li>Demander la limitation de certains traitements</li>
+        <li>Vous opposer lorsque cela est applicable</li>
+      </ul>
+
+      <h2>9. Contact</h2>
+      <p>
+        Pour toute question relative à la confidentialité ou à l'exercice de vos droits, vous pouvez écrire à
+        <a href={`mailto:${site.email}`}> {site.email}</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
