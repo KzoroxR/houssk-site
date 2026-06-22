@@ -23,10 +23,30 @@ import { site } from "../data/site";
         <li>Identité et coordonnées de contact</li>
         <li>Informations de connexion</li>
         <li>Données liées à l'utilisation de l'application</li>
+        <li>Données de localisation approximative ou précise, en premier plan et, avec votre autorisation explicite, en arrière-plan</li>
         <li>Échanges réalisés via un formulaire, un e-mail ou un support</li>
       </ul>
 
-      <h2>3. Finalités du traitement</h2>
+      <h2>3. Données de localisation</h2>
+      <p>
+        Houssk peut accéder à la position géographique de votre appareil, notamment à sa latitude, sa longitude, sa précision et sa direction. Cet accès est facultatif et soumis aux autorisations de localisation d'Android ou d'iOS.
+      </p>
+      <p>La localisation est utilisée pour :</p>
+      <ul>
+        <li>Afficher la météo correspondant à votre position</li>
+        <li>Afficher votre dernière position sur la carte du foyer</li>
+        <li>Partager votre position avec les membres du foyer que vous avez rejoint</li>
+        <li>Actualiser cette position lorsque l'application est au premier plan</li>
+        <li>Continuer l'actualisation en arrière-plan, même lorsque l'application est fermée, uniquement si vous avez activé le partage et accordé l'autorisation correspondante</li>
+      </ul>
+      <p>
+        La dernière position partagée est enregistrée sur notre infrastructure Supabase et associée à votre compte et à votre foyer. Elle est accessible aux membres authentifiés de ce même foyer. Les coordonnées nécessaires aux prévisions et au nom de la localité sont également transmises respectivement à Open-Meteo et BigDataCloud.
+      </p>
+      <p>
+        Houssk ne vend pas vos données de localisation et ne transmet pas votre position aux régies publicitaires. Vous pouvez arrêter le partage depuis l'application et retirer les autorisations de localisation à tout moment dans les réglages de votre appareil. La dernière position déjà enregistrée peut rester disponible jusqu'à son remplacement ou jusqu'à la suppression du compte ou des données concernées.
+      </p>
+
+      <h2>4. Finalités du traitement</h2>
       <ul>
         <li>Fournir l'accès au site et à l'application</li>
         <li>Assurer le bon fonctionnement du service</li>
@@ -35,7 +55,7 @@ import { site } from "../data/site";
         <li>Respecter les obligations légales et de sécurité</li>
       </ul>
 
-      <h2>4. Base légale</h2>
+      <h2>5. Base légale</h2>
       <ul>
         <li>L'exécution du service</li>
         <li>Le consentement de l'utilisateur</li>
@@ -43,22 +63,22 @@ import { site } from "../data/site";
         <li>Le respect d'obligations légales</li>
       </ul>
 
-      <h2>5. Conservation des données</h2>
+      <h2>6. Conservation des données</h2>
       <p>
         Les données sont conservées pendant une durée proportionnée à leur finalité, puis supprimées ou anonymisées lorsque leur conservation n'est plus nécessaire.
       </p>
 
-      <h2>6. Partage des données</h2>
+      <h2>7. Partage des données</h2>
       <p>
         Les données ne sont pas vendues. Elles peuvent être partagées uniquement avec des prestataires techniques ou des services nécessaires au fonctionnement, à l'hébergement, à la maintenance ou à la sécurité de la plateforme.
       </p>
 
-      <h2>7. Sécurité</h2>
+      <h2>8. Sécurité</h2>
       <p>
         Des mesures techniques et organisationnelles raisonnables sont mises en place pour limiter l'accès non autorisé, la perte, l'altération ou la divulgation des données.
       </p>
 
-      <h2>8. Vos droits</h2>
+      <h2>9. Vos droits</h2>
       <ul>
         <li>Accéder à vos données</li>
         <li>Demander leur rectification</li>
@@ -67,7 +87,7 @@ import { site } from "../data/site";
         <li>Vous opposer lorsque cela est applicable</li>
       </ul>
 
-      <h2>9. Contact</h2>
+      <h2>10. Contact</h2>
       <p>
         Pour toute question relative à la confidentialité ou à l'exercice de vos droits, vous pouvez écrire à
         <a href={`mailto:${site.email}`}> {site.email}</a>.
