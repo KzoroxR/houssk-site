@@ -25,8 +25,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Tina",
-  description: "Tina Cloud Starter",
+  title: "Houssk",
+  description: "Houssk présente hous.sk, l'application mobile pour organiser les tâches, les dépenses, les courses et le calendrier du foyer.",
 };
 
 export default function RootLayout({
@@ -35,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn(fontSans.variable, nunito.variable, lato.variable)}>
-      <body className="min-h-screen bg-background font-sans antialiased">
+    <html lang="fr" className={cn(fontSans.variable, nunito.variable, lato.variable)}>
+      <body className="dark min-h-screen bg-background font-sans antialiased">
         <VideoDialogProvider>
           {children}
           <VideoDialog />

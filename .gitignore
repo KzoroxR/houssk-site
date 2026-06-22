@@ -12,6 +12,10 @@
 /out/
 next-env.d.ts
 
+# astro
+/.astro/
+/dist/
+
 # production
 /build
 

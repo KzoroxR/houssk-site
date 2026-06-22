@@ -7,7 +7,7 @@ import { useLayout } from "../layout-context";
 import { Menu, X } from "lucide-react";
 
 export const Header = () => {
-  const { globalSettings, theme } = useLayout();
+  const { globalSettings } = useLayout();
   const header = globalSettings!.header!;
 
   const [menuState, setMenuState] = React.useState(false)
@@ -15,7 +15,7 @@ export const Header = () => {
     <header>
       <nav
         data-state={menuState && 'active'}
-        className="bg-background/50 fixed z-20 w-full border-b backdrop-blur-3xl">
+        className="fixed z-20 w-full border-b border-white/8 bg-black/55 backdrop-blur-3xl">
         <div className="mx-auto max-w-6xl px-6 transition-all duration-300">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full items-center justify-between gap-12">
@@ -31,9 +31,11 @@ export const Header = () => {
                     style: header.icon!.style,
                   }}
                 />{" "}
-                <span>
-                  {header.name}
-                </span>
+                {header.icon!.name !== "HousskLogo" && (
+                  <span>
+                    {header.name}
+                  </span>
+                )}
               </Link>
 
               <button
@@ -50,7 +52,7 @@ export const Header = () => {
                     <li key={index}>
                       <Link
                         href={item!.href!}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150">
+                        className="block text-muted-foreground duration-150 hover:text-white">
                         <span>{item!.label}</span>
                       </Link>
                     </li>
@@ -59,14 +61,14 @@ export const Header = () => {
               </div>
             </div>
 
-            <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
+            <div className="in-data-[state=active]:block mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-white/10 bg-black/85 p-6 shadow-2xl shadow-black/30 md:flex-nowrap lg:in-data-[state=active]:flex lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none">
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
                   {header.nav!.map((item, index) => (
                     <li key={index}>
                       <Link
                         href={item!.href!}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150">
+                        className="block text-muted-foreground duration-150 hover:text-white">
                         <span>{item!.label}</span>
                       </Link>
                     </li>

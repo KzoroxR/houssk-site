@@ -1,58 +1,33 @@
 {
   "header": {
     "icon": {
-      "name": "Tina",
-      "color": "orange",
+      "name": "HousskLogo",
+      "color": "purple",
       "style": "float"
     },
-    "name": "Tina Starter",
-    "color": "default",
+    "name": "Houssk",
+    "color": "primary",
     "nav": [
       {
         "href": "/",
-        "label": "Home"
+        "label": "Accueil"
       },
       {
         "href": "/about",
-        "label": "About"
+        "label": "Produit"
       },
       {
-        "href": "/posts",
-        "label": "Blog"
+        "href": "https://hous.sk",
+        "label": "App"
       }
     ]
   },
   "footer": {
-    "social": [
-      {
-        "icon": {
-          "name": "FaLinkedin"
-        },
-        "url": "https://www.linkedin.com/company/tinacms"
-      },
-      {
-        "icon": {
-          "name": "FaGithub"
-        },
-        "url": "https://github.com/tinacms/tinacms"
-      },
-      {
-        "icon": {
-          "name": "FaYoutube"
-        },
-        "url": "https://www.youtube.com/@TinaCMS"
-      },
-      {
-        "icon": {
-          "name": "FaXTwitter"
-        },
-        "url": "https://x.com/TinaCMS"
-      }
-    ]
+    "social": []
   },
   "theme": {
-    "color": "blue",
-    "font": "sans",
-    "darkMode": "light"
+    "color": "purple",
+    "font": "nunito",
+    "darkMode": "dark"
   }
 }
