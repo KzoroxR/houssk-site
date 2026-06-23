@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "sync:webapp": "node scripts/sync-web-app.mjs",
     "preview": "astro preview --host 0.0.0.0",
     "start": "astro preview --host 0.0.0.0"
   },

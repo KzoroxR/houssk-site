@@ -145,6 +145,12 @@ button {
   flex-wrap: wrap;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
 .main-nav a,
 .footer-links a,
 .text-link {
@@ -184,6 +190,12 @@ button {
   color: white;
   background: linear-gradient(135deg, var(--accent), var(--accent-deep));
   box-shadow: 0 18px 52px rgba(139, 92, 246, 0.22);
+}
+
+.nav-cta-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--line-strong);
+  box-shadow: none;
 }
 
 .button-secondary {

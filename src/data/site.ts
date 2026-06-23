@@ -4,6 +4,7 @@ export const site = {
   description:
     "hous.sk centralise les tâches, dépenses, courses, repas, notes, plannings, événements et foyers partagés dans une application mobile simple et élégante.",
   appUrl: "https://play.google.com/store/apps/details?id=com.chrisrolin.houssk",
+  webAppUrl: "/app/",
   email: "contact@houssk.fr",
 };
 

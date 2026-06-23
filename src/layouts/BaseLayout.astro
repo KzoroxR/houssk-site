@@ -45,7 +45,10 @@ const {
             ))
           }
         </nav>
-        <a href={site.appUrl} class="nav-cta">Télécharger</a>
+        <div class="nav-actions">
+          <a href={site.webAppUrl} class="nav-cta nav-cta-secondary">App web</a>
+          <a href={site.appUrl} class="nav-cta">Télécharger</a>
+        </div>
       </header>
       <main>
         <slot />
@@ -58,6 +61,7 @@ const {
         <div class="footer-links">
           <a href="/confidentialite">Confidentialité</a>
           <a href="/suppression-compte">Suppression de compte</a>
+          <a href={site.webAppUrl}>App web</a>
           <a href={site.appUrl}>Google Play</a>
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </div>
