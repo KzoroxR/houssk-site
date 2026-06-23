@@ -27,7 +27,7 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.href} />
-    <meta property="og:image" content={new URL("/uploads/houssk/dashboard.png", Astro.site)} />
+    <meta property="og:image" content={new URL("/uploads/houssk/iPhone%2015.png", Astro.site)} />
     <script is:inline>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -45,7 +45,7 @@ const {
             ))
           }
         </nav>
-        <a href={site.appUrl} class="nav-cta">Ouvrir l'app</a>
+        <a href={site.appUrl} class="nav-cta">Télécharger</a>
       </header>
       <main>
         <slot />
@@ -53,7 +53,7 @@ const {
       <footer class="site-footer">
         <div>
           <Logo class="footer-logo" />
-          <p>Application de foyer pensée pour les couples, colocs et familles qui veulent enfin centraliser le quotidien.</p>
+          <p>Application de foyer pensée pour les couples, colocs et familles qui veulent centraliser le quotidien sans se rajouter une usine à gaz.</p>
         </div>
         <div class="footer-links">
           <a href="/confidentialite">Confidentialité</a>
@@ -73,8 +73,8 @@ const {
             const rect = node.getBoundingClientRect();
             const center = rect.top + rect.height / 2;
             const distance = (center - viewport / 2) / viewport;
-            node.style.setProperty("--parallax-shift", `${distance * -32}px`);
-            node.style.setProperty("--parallax-rotate", `${distance * 6}deg`);
+            node.style.setProperty("--parallax-shift", `${distance * -28}px`);
+            node.style.setProperty("--parallax-rotate", `${distance * 3.5}deg`);
           });
         };
         let ticking = false;

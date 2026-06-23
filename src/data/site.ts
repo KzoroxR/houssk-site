@@ -1,73 +1,60 @@
 export const site = {
-  name: "Houssk",
-  title: "Houssk | L'app foyer qui remet tout au même endroit",
+  name: "hous.sk",
+  title: "hous.sk | L'app qui organise vraiment le foyer",
   description:
-    "Houssk présente hous.sk, l'application mobile pour piloter les tâches, les dépenses, les courses, le calendrier, les repas et les échanges du foyer.",
+    "hous.sk centralise les tâches, dépenses, courses, repas, notes, plannings, événements et foyers partagés dans une application mobile simple et élégante.",
   appUrl: "https://play.google.com/store/apps/details?id=com.chrisrolin.houssk",
   email: "contact@houssk.fr",
 };
 
 export const navLinks = [
-  { href: "#fonctionnalites", label: "Fonctionnalités" },
-  { href: "#experience", label: "Expérience" },
-  { href: "#modules", label: "Modules" },
+  { href: "/#foyers", label: "Foyers" },
+  { href: "/#modules", label: "Fonctions" },
+  { href: "/#premium", label: "Premium" },
   { href: "/confidentialite", label: "Confidentialité" },
-];
-
-export const featureCards = [
-  {
-    eyebrow: "Coordination",
-    title: "Tableau de bord vivant",
-    text: "Tout le foyer voit en un coup d'oeil les tâches prioritaires, le solde des dépenses, les courses, la météo et les événements à venir.",
-  },
-  {
-    eyebrow: "Routine",
-    title: "Tâches qui reviennent vraiment",
-    text: "Ménage, robot, cuisine, rappels du quotidien: Houssk suit les récurrences et donne de la lisibilité sans transformer la maison en usine à gaz.",
-  },
-  {
-    eyebrow: "Équilibre",
-    title: "Dépenses et remboursements",
-    text: "Le module dépenses clarifie qui a payé, ce qui reste dû et l'état du mois sans passer par un tableur partagé bancal.",
-  },
-  {
-    eyebrow: "Charge mentale",
-    title: "Courses, repas, notes et chat",
-    text: "Les listes, les idées repas, les notes utiles et les messages du foyer cohabitent dans le même espace plutôt que dans quatre apps séparées.",
-  },
 ];
 
 export const modules = [
   {
-    title: "Tâches",
-    subtitle: "Rappels, récurrences, priorités, états d'avancement",
-    image: "/uploads/houssk/tasks.png",
+    title: "Foyers partagés",
+    text: "Créez un foyer, invitez les personnes concernées, puis passez d'un foyer à l'autre si vous gérez plusieurs maisons, colocations ou familles.",
+    icon: "🏠",
   },
   {
-    title: "Dépenses",
-    subtitle: "Paiements, remboursements, catégories et solde",
-    image: "/uploads/houssk/expenses.png",
+    title: "Tâches récurrentes",
+    text: "Ajoutez les routines du quotidien, attribuez-les, suivez les retards et renouvelez ce qui revient toutes les semaines ou tous les mois.",
+    icon: "✅",
   },
   {
-    title: "Calendrier",
-    subtitle: "Événements du mois, visibilité commune, rythme du foyer",
-    image: "/uploads/houssk/calendar.png",
+    title: "Calendrier commun",
+    text: "Centralisez les événements, rendez-vous, sorties et moments importants pour que tout le monde sache ce qui arrive.",
+    icon: "📅",
   },
   {
-    title: "Courses",
-    subtitle: "Listes catégorisées, actions rapides, usage en magasin",
-    image: "/uploads/houssk/shopping.png",
+    title: "Courses collaboratives",
+    text: "Gardez une liste de courses partagée, organisée par catégories, prête à être utilisée en magasin.",
+    icon: "🛒",
   },
-];
-
-export const pillars = [
-  "Tableau de bord partagé",
-  "Tâches récurrentes et ponctuelles",
-  "Dépenses du foyer et remboursements",
-  "Calendrier commun",
-  "Liste de courses collaborative",
-  "Repas, notes et messages",
-  "Base produit sombre, lisible, mobile-first",
+  {
+    title: "Dépenses type Tricount",
+    text: "Notez qui a payé quoi, répartissez équitablement entre les membres du foyer et voyez clairement les remboursements.",
+    icon: "💸",
+  },
+  {
+    title: "Notes de frigo",
+    text: "Laissez une note utile au foyer comme sur le frigo : infos pratiques, rappels rapides, consignes ou idées à ne pas perdre.",
+    icon: "📝",
+  },
+  {
+    title: "Repas et recettes",
+    text: "Préparez la semaine, enregistrez vos recettes et envoyez les ingrédients directement dans la liste de courses.",
+    icon: "🍳",
+  },
+  {
+    title: "Présence et planning",
+    text: "Consultez les emplois du temps et, avec accord explicite, la position des membres pour mieux coordonner la journée.",
+    icon: "📍",
+  },
 ];
 
 export const legalNav = [
